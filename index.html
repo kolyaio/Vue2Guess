@@ -60,9 +60,9 @@
             </tr>
           </thead>
           <tbody>
-              <tr v-for="i in 3">
-                <td>{{guesses[i-1]}}</td>
-                <td>{{randoms[i-1]}}</td>
+              <tr v-for="(guess, i) in guesses">
+                <td>{{guesses[i]}}</td>
+                <td>{{randoms[i]}}</td>
               </tr>
           </tbody>
         </table>
