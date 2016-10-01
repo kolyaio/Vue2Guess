@@ -20,16 +20,15 @@ var vm = new Vue({
           this.counter = 0;
 
           for(let i in this.randoms) {
-            this.randoms.$set(i, this.getRandomNumber());
+            this.randoms.splice(i, 1, this.getRandomNumber());
           }
 
           this.showTable = true;
 
           for(let i in [...Array(3)]) {
-            if(i == 0) {
-              //  console.log('///////////////////////////////////////////////')
-            }
-
+            // if(i == 0) {
+            //   //  console.log('///////////////////////////////////////////////')
+            // }
             if(this.randoms[i] == this.guesses[i]) {
               this.counter++;
               // console.log(this.counter);
@@ -63,16 +62,16 @@ var vm = new Vue({
           console.log('------------------------------------------------')
         } // checkValidity closing
       },
-      reset: function(evemt) {
+      reset: function(event) {
         event.preventDefault();
         this.showTable = false;
 
         for(let i in this.randoms) {
-          this.randoms.$set(i, 0);
+          this.randoms.splice(i, 1, 0)
         }
 
         for(let i in this.guesses) {
-          this.guesses.$set(i, 0);
+          this.guesses.splice(i, 1, 0)
         }
         this.message = "";
         this.counter = 0;
