@@ -4,4 +4,4 @@ Guess The Numbers!
  If all the numbers are correct you Win.
  This version built with Vue 2.0
 
- You can see this in action on [http://nick2il.github.com/Vue2Guess](http://nick2il.github.com/Vue2Guess)
+ You can see this in action on [http://kolyaio.github.com/Vue2Guess](http://kolyaio.github.com/Vue2Guess)
